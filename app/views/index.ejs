@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <img src="img/logo.png" alt="logo" width="20%""/>
+    <h1><%= title %></h1>
+    <form>
+        BLZ: <input name="BLZ" type="text" value="<%= BLZ %>"/>
+        Kontonummer: <input name="AcctNo" type="text" value="<%= AcctNo %>"/>
+        <input type="submit" value="OK"/>
+    </form>
+    IBAN: <%= IBAN %>
+  </body>
+</html>
