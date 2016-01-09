@@ -3,33 +3,44 @@
   <head>
     <title>IBAN Rechner</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/sticky-footer.css"/>
   </head>
   <body>
-    <h1>IBAN Rechner</h1>
-    <form>
-      <div class="form-group">
-        <label for="BLZ">BLZ</label>
-        <input name="BLZ" type="text" value="<%= BLZ %>" class="form-control"/>
-      </div>
-      <div class="form-group">
-        <label for="AcctNo">Kontonummer</label>
-        <input name="AcctNo" type="text" value="<%= AcctNo %>" class="form-control"/>
-      </div>
-      <div class="form-group">
-        <input type="submit" class="btn btn-default" value="umrechnen"/>
-      </div>
-    </form>
-    <div class="form-group">
-      <label for="IBAN">IBAN</label>
-      <div class="form-horizontal">
+    <div class="container">
+      <h1>IBAN Rechner</h1>
+      <form>
         <div class="form-group">
-          <div class="col-md-6">
-            <input id="txtIBAN" name="IBAN" type="text" value="<%= IBAN %>" class="form-control" readonly/>
+          <label for="BLZ">BLZ</label>
+          <input name="BLZ" type="text" value="<%= BLZ %>" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label for="AcctNo">Kontonummer</label>
+          <input name="AcctNo" type="text" value="<%= AcctNo %>" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <input type="submit" class="btn btn-default" value="umrechnen"/>
+        </div>
+      </form>
+      <div class="form-group">
+        <label for="IBAN">IBAN</label>
+        <div class="form-horizontal">
+          <div class="form-group">
+            <div class="col-md-6">
+              <input id="txtIBAN" name="IBAN" type="text" value="<%= IBAN %>" class="form-control" readonly/>
+            </div>
+            <button id="btnCopyIBAN" class="btn">Kopieren</button>
           </div>
-          <button id="btnCopyIBAN" class="btn">Kopieren</button>
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">
+          <a href="impressum.html">Impressum</a>
+          Version <%= version %>
+        </p>
+      </div>
+    </footer>
     <script src="js/index.js"></script>
   </body>
 </html>

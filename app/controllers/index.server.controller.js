@@ -1,6 +1,7 @@
 var NUMBER_REGEX = /^\d+$/;
 var LETTER_REGEX = /[A-Z]/;
 var strint = require('./strint');
+var pjson = require('../../package.json');
 
 function pad(num, size) {
     var s = num+"";
@@ -94,6 +95,7 @@ exports.render = function(req, res) {
   res.render('index', {
     BLZ : blz,
     AcctNo : acctNo,
-    IBAN: iban
+    IBAN: iban,
+    version: pjson.version
   });
 };
