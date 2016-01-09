@@ -92,7 +92,6 @@ exports.render = function(req, res) {
   iban = calculateIBAN(blz, acctNo);
 
   res.render('index', {
-    title : 'Iban Calc',
     BLZ : blz,
     AcctNo : acctNo,
     IBAN: iban

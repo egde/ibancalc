@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <title>IBAN Rechner</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
   </head>
   <body>
-    <img src="img/logo.png" alt="logo" width="20%""/>
-    <h1><%= title %></h1>
+    <h1>IBAN Rechner</h1>
     <form>
-        BLZ: <input name="BLZ" type="text" value="<%= BLZ %>"/>
-        Kontonummer: <input name="AcctNo" type="text" value="<%= AcctNo %>"/>
-        <input type="submit" value="OK"/>
+      <div class="form-group">
+        <label for="BLZ">BLZ</label>
+        <input name="BLZ" type="text" value="<%= BLZ %>" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="AcctNo">Kontonummer</label>
+        <input name="AcctNo" type="text" value="<%= AcctNo %>" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <input type="submit" class="btn btn-default" value="umrechnen"/>
+      </div>
     </form>
-    IBAN: <%= IBAN %>
+    <div class="form-group">
+      <label for="IBAN">IBAN</label>
+      <div class="form-horizontal">
+        <div class="form-group">
+          <div class="col-md-6">
+            <input id="txtIBAN" name="IBAN" type="text" value="<%= IBAN %>" class="form-control" readonly/>
+          </div>
+          <button id="btnCopyIBAN" class="btn">Kopieren</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
