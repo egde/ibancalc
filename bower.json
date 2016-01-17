@@ -1,0 +1,8 @@
+{
+  "name": "ibanCalc",
+  "version": "0.1.1-DEV",
+  "dependencies": {
+  	"angular": "~1.2",
+  	"angular-route": "~1.2"
+  }
+}

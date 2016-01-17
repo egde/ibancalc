@@ -1,0 +1,34 @@
+<div class="container" ng-controller="ibanCalcController">
+  <h1>IBAN Rechner</h1>
+  
+  <section>
+    <div class="form-group">
+      <label for="BLZ">BLZ</label>
+      <input name="BLZ" type="text" class="form-control" ng-model="BLZ"/>
+    </div>
+    <div class="form-group">
+      <label for="AcctNo">Kontonummer</label>
+      <input name="AcctNo" type="text" class="form-control" ng-model="AcctNo"/>
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-default" value="umrechnen" data-ng-click="convert();"/>
+    </div>
+  </section>
+
+  <div ng-show="IBAN">
+    <div class="form-group">
+      <label for="IBAN">IBAN</label>
+      <div class="row">
+        <div class="col-sm-10">
+          <input id="txtIBAN" name="IBAN" type="text" class="form-control col-md-6" ng-model="IBAN" />
+        </div>
+        <div class="col-sm-2">
+          <button id="btnCopyIBAN" class="btn" ng-click="copy();">Kopieren</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
