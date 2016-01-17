@@ -1,38 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:ng="http://angularjs.org">
   <head>
-    <title>IBAN Rechner</title>
+    <title>baboon.rocks</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/sticky-footer.css"/>
   </head>
   <body>
-    <div class="container">
-      <h1>IBAN Rechner</h1>
-      <form>
-        <div class="form-group">
-          <label for="BLZ">BLZ</label>
-          <input name="BLZ" type="text" value="<%= BLZ %>" class="form-control"/>
-        </div>
-        <div class="form-group">
-          <label for="AcctNo">Kontonummer</label>
-          <input name="AcctNo" type="text" value="<%= AcctNo %>" class="form-control"/>
-        </div>
-        <div class="form-group">
-          <input type="submit" class="btn btn-default" value="umrechnen"/>
-        </div>
-      </form>
-      <div class="form-group">
-        <label for="IBAN">IBAN</label>
-        <div class="form-horizontal">
-          <div class="form-group">
-            <div class="col-md-6">
-              <input id="txtIBAN" name="IBAN" type="text" value="<%= IBAN %>" class="form-control" readonly/>
+    <!-- HEADER AND NAVBAR -->
+    <header>
+        <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">baboon.rocks</a>
             </div>
-            <button id="btnCopyIBAN" class="btn">Kopieren</button>
-          </div>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#!ibanCalc"><i class="fa fa-home"></i> IBAN Rechner</a></li>
+            </ul>
         </div>
-      </div>
+        </nav>
+    </header>
+
+    <div class="container" ng-view>
+    <!-- Content provided by Angular and ngRoutes-->  
     </div>
+    
     <footer class="footer">
       <div class="container">
         <p class="text-muted">
@@ -41,6 +33,17 @@
         </p>
       </div>
     </footer>
-    <script src="js/index.js"></script>
+
+    <script type="text/javascript" src="/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+
+    <script type="text/javascript" src="/index/index.client.module.js"></script>
+    <script type="text/javascript" src="/index/config/index.client.routes.js"></script>
+
+      <script type="text/javascript" src="/ibanCalc/ibanCalc.client.module.js"></script>
+      <script type="text/javascript" src="/ibanCalc/controllers/ibanCalc.client.controller.js"></script>
+      <script type="text/javascript" src="/ibanCalc/config/ibanCalc.client.routes.js"></script>
+
+    <script type="text/javascript" src="/application.js"></script>
   </body>
 </html>

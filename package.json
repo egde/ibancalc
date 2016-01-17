@@ -1,6 +1,6 @@
 {
   "name": "ibanCalc",
-  "version": "0.1.0-DEV",
+  "version": "0.1.1-DEV",
   "description": "A simple web GUI for calculating the IBAN",
   "main": "./server.js",
   "author": "egde",

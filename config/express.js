@@ -3,6 +3,7 @@ var config = require('./config'),
 
 function readRoutes(app) {
   require('../app/routes/index.server.routes.js')(app);
+  require('../app/routes/ibanCalc.server.routes.js')(app);
 }
 
 module.exports = function() {
