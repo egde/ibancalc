@@ -15,5 +15,7 @@ For now it is just a simple IBAN converter. But I guess a few tools will come so
 1. `git clone https://github.com/egde/ibancalc`
 2. `cd ibancalc`
 3. `npm install`
+4. `npm install -g bower`
+5. `bower install`
 4. `node server`
 5. Go with your browser to http://localhost:3000
